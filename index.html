@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+  <title>Pong</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <section id="setup" class="panel">
+      <h1>PONG</h1>
+
+      <label>
+        Nom joueur 1
+        <input id="player1" type="text" maxlength="15" placeholder="Joueur 1" autocomplete="off">
+      </label>
+
+      <label>
+        Nom joueur 2
+        <input id="player2" type="text" maxlength="15" placeholder="Joueur 2" autocomplete="off">
+      </label>
+
+      <button id="startButton">JOUER</button>
+      <p class="help">Sur téléphone : faites glisser votre doigt sur votre moitié de l'écran pour déplacer votre raquette.</p>
+      <p class="help">Sur ordinateur : joueur 1 = S/W · joueur 2 = ↑/↓</p>
+    </section>
+
+    <section id="game" hidden>
+      <div class="scoreboard">
+        <div id="name1">Joueur 1</div>
+        <div id="score">0 - 0</div>
+        <div id="name2">Joueur 2</div>
+      </div>
+
+      <div class="target">Premier à 5</div>
+
+      <canvas id="pongCanvas" width="800" height="600"></canvas>
+
+      <div class="info">
+        <span id="time">Temps : 0s</span>
+        <button id="restartButton">RECOMMENCER</button>
+      </div>
+
+      <p class="touchHelp">Joueur 1 : moitié gauche · Joueur 2 : moitié droite</p>
+    </section>
+
+    <div id="message" class="message" hidden></div>
+  </main>
+
+  <script src="pong.js"></script>
+</body>
+</html>
